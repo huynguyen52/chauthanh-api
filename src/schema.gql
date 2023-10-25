@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Blog {
+  id: String!
+  content: String!
+}
+
+type Query {
+  findAllBlogs: [Blog!]!
+  blog(id: String!): Blog!
+}
+
+type Mutation {
+  createBlog(createBlogInput: CreateBlogInput!): Blog!
+  updateBlog(updateBlogInput: UpdateBlogInput!): Blog!
+  removeBlog(id: Int!): Blog!
+}
+
+input CreateBlogInput {
+  content: String!
+}
+
+input UpdateBlogInput {
+  content: String
+  id: Int!
+}
